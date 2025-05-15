@@ -1,0 +1,27 @@
+# Node dependencies
+**/node_modules/
+
+# Build output
+dist/
+build/
+*.log
+
+# Environment files
+.env
+.env.*
+!.env.example
+
+# IDE/editor settings
+.vscode/
+.idea/
+.DS_Store
+
+# OS-generated files
+Thumbs.db
+
+# Package manager
+pnpm-lock.yaml
+
+# Optional: local test data or temp
+tmp/
+.cache/
