@@ -12,16 +12,18 @@ build/
 !.env.example
 
 # IDE/editor settings
-.vscode/
+.vscode/*
+!.vscode/settings.json
 .idea/
 .DS_Store
 
 # OS-generated files
 Thumbs.db
 
-# Package manager
-pnpm-lock.yaml
-
 # Optional: local test data or temp
 tmp/
 .cache/
+
+# Husky-related (you SHOULD commit .husky itself)
+.husky/_/
+
