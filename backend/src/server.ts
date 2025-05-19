@@ -1,33 +1,23 @@
-import Fastify from 'fastify';
+import express from 'express';
 import dotenv from 'dotenv';
 
 dotenv.config();
 
-const app = Fastify();
+const app = express();
+const port = Number(process.env.PORT || 3000);
 
-app.get('/', async () => {
-  return {
+app.get('/', (req, res) => {
+  res.json({
     message: 'Welcome to the Bus Tracking API. Try /health to check status.',
-  };
+  });
 });
 
-app.get('/health', async () => {
-  return {
+app.get('/health', (req, res) => {
+  res.json({
     status: 'ok',
-  };
+  });
 });
 
-const start = async () => {
-  try {
-    const port = Number(process.env.PORT || 3000);
-
-    await app.listen({ port, host: '0.0.0.0' });
-
-    console.log(`🚀 Fastify listening on http://localhost:${port}`);
-  } catch (err) {
-    app.log.error(err);
-    process.exit(1);
-  }
-};
-
-start();
+app.listen(port, () => {
+  console.log(`Express server listeningon  http://localhost:${port}`);
+});

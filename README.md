@@ -3,7 +3,7 @@
 A real-time bus tracking system built with:
 
 - React + Tailwind CSS + Mapbox (Frontend)
-- Fastify + TypeScript + GTFS-RT + Supabase (Backend)
+- Express.js + TypeScript + GTFS-RT + Supabase (Backend)
 - Monorepo managed with pnpm workspaces
 
 ---
@@ -12,7 +12,7 @@ A real-time bus tracking system built with:
 
 ```bash
 /frontend   # React app (Vite)
-/backend    # Fastify server with GTFS polling
+/backend    # Express.js server with GTFS polling
 /shared     # (Optional) Shared types/constants
 ```
 
